@@ -6,7 +6,7 @@ from flask_cors import CORS,cross_origin
 
 # print('__file__={0:<35} | __name__={1:<20} | __package__={2:<20}'.format(__file__,__name__,str(__package__)))
 from .database.models import db_drop_and_create_all, setup_db, Drink
-from .auth.auth import AuthError, requires_auth
+from .auth.auth import AuthError, requires_auth #remove do before first auth to remove Import error
 
 app = Flask(__name__)
 setup_db(app)
